@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+
+    --cor1: #e1cbb0;
+    --cor2: #fcfcfc;
+    --cor3: #597b9b;
+    --cor4: #3f735c;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+nav {
+    position: absolute;
+}
+
+section {
+    display: grid;
+    align-items: center;
+    grid-template: "i t t";
+    height: 100%;
+    padding: 1vw;
+}
+
+section.dir {
+    grid-template: "t t i";
+}
+
+section div.img {
+    grid-area: i;
+    padding: 1vw;
+}
+
+section img {
+    width: 100%;
+    border-radius: 100%;
+}
+
+section div#livro img {
+    border-radius: 2%;
+}
+
+section div.texto {
+    grid-area: t;
+    display: grid;
+    font: 1.6vw normal, "Quicksand";
+    text-align: justify;
+    padding: 2vw;
+}
+
+span.titulo {
+    font: 5vw normal, "Kaushan Script";
+    padding: 1vw;
+    text-align: center;
+}
+
+/* Personalização */
+section#isabel {
+    background: var(--cor1);
+}
+
+section#historia {
+    background: var(--cor2)
+}
+
+section#livro {
+    background: var(--cor3);
+    color: var(--cor2);
+}
+
+section#contato {
+    background: var(--cor4);
+    color: var(--cor2);
+}
