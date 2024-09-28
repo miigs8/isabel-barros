@@ -165,3 +165,17 @@ section#contato a:hover {
         font-size: 3vw;
     }
 }
+
+@media screen and (max-width: 600px) {
+    section, section.dir {
+        grid-template: "i" "t" "t";
+    }
+
+    section div.img {
+        width: 70%;
+    }
+
+    section div.texto {
+        font-size: 3.2vw;
+    }
+}
