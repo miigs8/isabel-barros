@@ -15,10 +15,37 @@ body, html {
     overflow-x: hidden;
 }
 
-nav {
+/* Menu */
+nav ul {
     position: absolute;
+    padding: 1vw;
+    font: 1.5vw normal, "Quicksand";
+    background-color: var(--cor4);
+    color: var(--cor2);
+    border-bottom-right-radius: 2%;
+    box-shadow: .25vw .25vw 5px rgba(0, 0, 0, 0.4);
 }
 
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cor2);
+    transition: color .3s;
+}
+
+nav ul li a:hover {
+    color: var(--cor1);
+    cursor: pointer;
+}
+
+nav ul li:not(:first-child)::before {
+    content: "| ";
+}
+
+/* Corpo */
 section {
     display: grid;
     align-items: center;
@@ -64,8 +91,36 @@ section#isabel {
     background: var(--cor1);
 }
 
+section#isabel a {
+    text-decoration: none;
+    background-color: var(--cor3);
+    color: var(--cor2);
+    padding: .05vw .2vw;
+    transition: background-color .3s, color .3s, padding .3s;
+}
+
+section#isabel a:hover {
+    background-color: var(--cor4);
+    color: var(--cor1);
+    padding: .1vw .5vw;
+}
+
 section#historia {
     background: var(--cor2)
+}
+
+section#historia a {
+    text-decoration: none;
+    background-color: var(--cor3);
+    color: var(--cor2);
+    padding: .05vw .2vw;
+    transition: background-color .3s, color .3s, padding .3s;
+}
+
+section#historia a:hover {
+    background-color: var(--cor1);
+    color: var(--cor4);
+    padding: .1vw .5vw;
 }
 
 section#livro {
@@ -76,4 +131,37 @@ section#livro {
 section#contato {
     background: var(--cor4);
     color: var(--cor2);
+}
+
+section#contato a {
+    text-decoration: none;
+    color: var(--cor2);
+    transition: color .3s;
+}
+
+section#contato a:hover {
+    color: var(--cor1);
+    cursor: pointer;
+}
+
+/* Telas */
+@media screen and (max-width: 1000px) {
+    nav ul {
+        font: 3vw normal, "Quicksand";
+    }
+}
+
+@media screen and (max-width: 700px) {
+    section, section.dir {
+        grid-template: "i" "t";
+        justify-items: center;
+    }
+
+    section div.img {
+        width: 50%;
+    }
+
+    section div.texto {
+        font-size: 3vw;
+    }
 }
